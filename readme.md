@@ -7,13 +7,18 @@
 ### Folder/File Structure:
 
 ```
-    logs/
     src/
         configs/
             dbConnection.js
             swagger.json
         controllers/
             auth.js
+            brand.js
+            category.js
+            firm.js
+            product.js
+            purchase.js
+            sale.js
             token.js
             user.js
         helpers/
@@ -27,12 +32,26 @@
             findSearchSortPage.js
             logger.js
             permissions.js
+            upload.js
         models/
+            brand.js
+            category.js
+            firm.js
+            product.js
+            purchase.js
+            sale.js
             token.js
             user.js
         routes/
             auth.js
+            brand.js
+            category.js
             document.js
+            firm.js
+            index.js
+            product.js
+            purchase.js
+            sale.js
             token.js
             user.js
     .env
@@ -42,5 +61,4 @@
     package.json
     readme.md
     swaggerAutogen.js
-
 ```
