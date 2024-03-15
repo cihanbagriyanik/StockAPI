@@ -48,6 +48,20 @@ app.use(require("./src/middlewares/authentication"));
 app.use(require("./src/middlewares/findSearchSortPage"));
 
 /* -------------------------------------------------------------------------- */
+//! BE AND FE CONNECT
+//? CORS
+const cors = require("cors");
+
+app.use(
+  cors({
+    origin: ["https://stock-management-app-cihan.vercel.app/"],
+    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+  })
+);
+
+//! BE AND FE CONNECT
+
+/* -------------------------------------------------------------------------- */
 //? Routes:
 // HomePath:
 app.all("/", (req, res) => {
