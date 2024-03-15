@@ -37,16 +37,6 @@ dbConnection();
 
 // Accept JSON:
 app.use(express.json());
-
-// Check Token:
-app.use(require("./src/middlewares/authentication"));
-
-// morgan-logger:
-// app.use(require("./src/middlewares/logger")); //*IN Comment coz of Deployment
-
-// res.getModelList:
-app.use(require("./src/middlewares/findSearchSortPage"));
-
 /* -------------------------------------------------------------------------- */
 //! BE AND FE CONNECT
 //? CORS
@@ -60,6 +50,15 @@ app.use(
 );
 
 //! BE AND FE CONNECT
+
+// Check Token:
+app.use(require("./src/middlewares/authentication"));
+
+// morgan-logger:
+// app.use(require("./src/middlewares/logger")); //*IN Comment coz of Deployment
+
+// res.getModelList:
+app.use(require("./src/middlewares/findSearchSortPage"));
 
 /* -------------------------------------------------------------------------- */
 //? Routes:
