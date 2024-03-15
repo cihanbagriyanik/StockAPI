@@ -44,7 +44,10 @@ const cors = require("cors");
 
 app.use(
   cors({
-    origin: ["https://stock-management-app-cihan.vercel.app"],
+    origin: [
+      "https://stock-management-app-cihan.vercel.app",
+      "https://stock-management-app-react-redux-formik-6logrn17n.vercel.app/",
+    ],
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
   })
 );
