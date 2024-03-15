@@ -21,7 +21,7 @@ const document = {
     license: { name: packageJson.license },
   },
   // host: `${HOST}:${PORT}`,
-  host: `https://stockapi-5xmh.onrender.com/`,
+  host: `https://stockapi-5xmh.onrender.comrs`,
   basePath: "/",
   schemes: ["http", "https"],
   consumes: ["application/json"],

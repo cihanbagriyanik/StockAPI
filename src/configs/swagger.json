@@ -13,7 +13,7 @@
       "name": "ISC Licence"
     }
   },
-  "host": "https://stockapi-5xmh.onrender.com/",
+  "host": "https://stockapi-5xmh.onrender.com",
   "basePath": "/",
   "schemes": [
     "http",
