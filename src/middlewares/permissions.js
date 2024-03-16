@@ -30,11 +30,7 @@ module.exports = {
   isStaff: (req, res, next) => {
     if (process.env.NODE_ENV == "dev") return next();
 
-    if (
-      req.user &&
-      req.user.isActive &&
-      (req.user.isAdmin || req.user.isStaff)
-    ) {
+    if (req.user && req.user.isActive && req.user.isStaff) {
       next();
     } else {
       res.errorStatusCode = 403;

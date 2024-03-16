@@ -13,14 +13,14 @@ const category = require("../controllers/category");
 //! URL: /categories
 router
   .route("/")
-  .get(permissions.isStaff, category.list)
-  .post(permissions.isAdmin, category.create);
+  .get(permissions.isLogin, category.list)
+  .post(permissions.isLogin, category.create);
 
 router
   .route("/:id")
-  .get(permissions.isStaff, category.read)
-  .put(permissions.isAdmin, category.update)
-  .patch(permissions.isAdmin, category.update)
+  .get(permissions.isLogin, category.read)
+  .put(permissions.isAdmin || permissions.isStaff, category.update)
+  .patch(permissions.isAdmin || permissions.isStaff, category.update)
   .delete(permissions.isAdmin, category.delete);
 
 /* -------------------------------------------------------------------------- */

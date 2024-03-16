@@ -13,14 +13,14 @@ const permissions = require("../middlewares/permissions");
 //! URL: /brands
 router
   .route("/")
-  .get(permissions.isStaff, brand.list)
-  .post(permissions.isStaff, brand.create);
+  .get(permissions.isLogin, brand.list)
+  .post(permissions.isLogin, brand.create);
 
 router
   .route("/:id")
-  .get(permissions.isStaff, brand.read)
-  .put(permissions.isAdmin, brand.update)
-  .patch(permissions.isAdmin, brand.update)
+  .get(permissions.isLogin, brand.read)
+  .put(permissions.isAdmin || permissions.isStaff, brand.update)
+  .patch(permissions.isAdmin || permissions.isStaff, brand.update)
   .delete(permissions.isAdmin, brand.delete);
 
 /* -------------------------------------------------------------------------- */

@@ -13,15 +13,15 @@ const purchase = require("../controllers/purchase");
 //! URL: /purchases
 router
   .route("/")
-  .get(permissions.isStaff, purchase.list)
-  .post(permissions.isStaff, purchase.create);
+  .get(permissions.isLogin, purchase.list)
+  .post(permissions.isLogin, purchase.create);
 
 router
   .route("/:id")
-  .get(permissions.isStaff, purchase.read)
-  .put(permissions.isStaff, purchase.update)
-  .patch(permissions.isStaff, purchase.update)
-  .delete(permissions.isStaff, purchase.delete);
+  .get(permissions.isLogin, purchase.read)
+  .put(permissions.isAdmin || permissions.isStaff, purchase.update)
+  .patch(permissions.isAdmin || permissions.isStaff, purchase.update)
+  .delete(permissions.isAdmin || permissions.isStaff, purchase.delete);
 
 /* -------------------------------------------------------------------------- */
 module.exports = router;

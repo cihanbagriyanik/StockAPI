@@ -13,14 +13,14 @@ const firm = require("../controllers/firm");
 //! URL: /firms
 router
   .route("/")
-  .get(permissions.isStaff, firm.list)
-  .post(permissions.isStaff, firm.create);
+  .get(permissions.isLogin, firm.list)
+  .post(permissions.isLogin, firm.create);
 
 router
   .route("/:id")
-  .get(permissions.isStaff, firm.read)
-  .put(permissions.isStaff, firm.update)
-  .patch(permissions.isStaff, firm.update)
+  .get(permissions.isLogin, firm.read)
+  .put(permissions.isAdmin || permissions.isStaff, firm.update)
+  .patch(permissions.isAdmin || permissions.isStaff, firm.update)
   .delete(permissions.isAdmin, firm.delete);
 
 /* -------------------------------------------------------------------------- */
