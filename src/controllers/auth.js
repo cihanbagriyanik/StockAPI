@@ -28,10 +28,10 @@ module.exports = {
             }
         }
     */
-    const { username, password } = req.body;
+    const { email, password } = req.body;
 
-    if (username && password) {
-      const user = await User.findOne({ username });
+    if (email && password) {
+      const user = await User.findOne({ email });
 
       if (user && user.password == passwordEncrypt(password)) {
         if (user.isActive) {
@@ -81,11 +81,11 @@ module.exports = {
         }
       } else {
         res.errorStatusCode = 401;
-        throw new Error("Please enter username and password.");
+        throw new Error("Please enter email and password.");
       }
     } else {
       res.errorStatusCode = 401;
-      throw new Error("Please enter username and password.");
+      throw new Error("Please enter email and password.");
     }
   },
 
