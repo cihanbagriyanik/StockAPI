@@ -39,7 +39,7 @@ dbConnection();
 app.use(express.json());
 /* -------------------------------------------------------------------------- */
 //! BE AND FE CONNECT
-//? CORS
+// CORS
 const cors = require("cors");
 
 app.use(
@@ -53,7 +53,6 @@ app.use(
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
   })
 );
-
 //! BE AND FE CONNECT
 
 // Check Token:
