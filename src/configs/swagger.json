@@ -46,7 +46,7 @@
           "Authentication"
         ],
         "summary": "Login",
-        "description": "Login with username (or email) and password for get simpleToken and JWT",
+        "description": "Login with email and password for get simpleToken and JWT",
         "parameters": [
           {
             "name": "body",
@@ -55,13 +55,13 @@
             "schema": {
               "type": "object",
               "properties": {
-                "username": {
+                "email": {
                   "type": "string",
-                  "example": "test"
+                  "example": "test@site.com"
                 },
                 "password": {
                   "type": "string",
-                  "example": "1234"
+                  "example": "Abc123!"
                 }
               }
             }
