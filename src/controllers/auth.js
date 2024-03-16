@@ -24,7 +24,7 @@ module.exports = {
             required: true,
             schema: {
                 "email": "test@site.com",
-                "password": "Abc123!",
+                "password": "1q2w3e4R!",
             }
         }
     */

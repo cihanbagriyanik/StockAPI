@@ -61,7 +61,7 @@
                 },
                 "password": {
                   "type": "string",
-                  "example": "Abc123!"
+                  "example": "1q2w3e4R!"
                 }
               }
             }
