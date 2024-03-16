@@ -47,6 +47,8 @@ app.use(
     origin: [
       "https://stock-management-app-cihan.vercel.app",
       "https://stock-management-app-react-redux-formik-6logrn17n.vercel.app/",
+      "http://localhost:5173/",
+      "http://localhost:3000/",
     ],
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
   })
