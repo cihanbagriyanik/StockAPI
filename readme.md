@@ -100,7 +100,7 @@ Stock Management API
 
 ## API Documentation(local)
 
-For more information about all the endpoints and how to use them, you can access the [Swagger UI](http://localhost:PORT/api-docs).
+For more information about all the endpoints and how to use them, you can access the [Swagger UI](https://stockapi-5xmh.onrender.com/documents/swagger/).
 
 ## Contribution
 
