@@ -77,7 +77,7 @@ Stock Management API
 
 [Stock Management App GitHub](https://github.com/cihanbagriyanik/Stock_Management_App_react-redux-formik-yup?tab=readme-ov-file)
 
-[Stock Management App (Frontend)](https://stock-management-app-cihan.vercel.app/)
+[Stock Management App (Link)](https://stock-management-app-cihan.vercel.app/)
 
 ## Technologies Used
 
