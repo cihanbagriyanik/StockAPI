@@ -71,13 +71,13 @@ app.all("/", (req, res) => {
   res.send({
     error: false,
     message: "Welcome to Stock Management API",
+    gitHub: "https://github.com/cihanbagriyanik/StockAPI",
     isLogin: req.isLogin,
     documents: {
       swagger: "/documents/swagger",
       redoc: "/documents/redoc",
       json: "/documents/json",
     },
-    gitHub: "https://github.com/cihanbagriyanik/StockAPI",
     user: req.user,
   });
 });
