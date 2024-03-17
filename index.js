@@ -77,6 +77,7 @@ app.all("/", (req, res) => {
       redoc: "/documents/redoc",
       json: "/documents/json",
     },
+    gitHub: "https://github.com/cihanbagriyanik/StockAPI",
     user: req.user,
   });
 });
